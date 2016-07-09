@@ -18,7 +18,7 @@ def makeChange(amnt):
             # Look backwards from i
             # Check what the lowest count is for j + previously calculated values
             if i - j >= 0:
-                count = i - j + 1
+                count = full_chain[i - j]['count'] + 1
                 if count < low_count:
                     low_count = count
                     coins = full_chain[i - j]['coins'][:]
